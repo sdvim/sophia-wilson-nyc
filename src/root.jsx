@@ -1,4 +1,5 @@
 // @refresh reload
+import { metadata } from "./data";
 import { Suspense } from "solid-js";
 import {
   A,
@@ -17,13 +18,14 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - With MDX</Title>
+        <Title>{metadata.title}</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <Meta name="description" content={metadata.description} />
       </Head>
       <Body>
         <ErrorBoundary>
-          <A href="/">Index</A>
+          <A href="/">Sophia Wilson</A>
           <A href="/about">About</A>
           <Suspense>
             <main>
