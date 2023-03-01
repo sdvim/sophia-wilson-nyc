@@ -7,7 +7,7 @@ const CarouselSlide = (props) => {
         class="carousel-slide-image"
         loading="lazy"
         style={{ 'background-image': `url(/images/${encodeURIComponent(props.filename)}?nf_resize=fit&h=480)` }}
-        src={`/images/${encodeURIComponent(props.filename)}?nf_resize=fit&h=1440)`}
+        src={`/images/${encodeURIComponent(props.filename)}?nf_resize=fit&h=1440`}
       />
       <h4 class="carousel-slide-title">{props.label || ' '}</h4>
     </div>
