@@ -25,11 +25,18 @@ nav {
   align-items: center;
   justify-content: space-between;
   font-family: 'Fredoka One', cursive;
-  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 96ch;
+  margin: 0 auto 1rem;
 }
 
 nav a {
   text-decoration: none;
+}
+
+nav h1 a,
+nav h1 a:visited {
+  color: currentColor;
 }
 
 main {
@@ -62,7 +69,11 @@ h4 {
 
 a,
 a:visited {
-  color: currentColor;
+  color: #C71C1C;
+}
+
+a:hover {
+  color: #0A58CA;
 }
 
 @media screen and (min-width: 600px) {
