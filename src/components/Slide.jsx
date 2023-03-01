@@ -13,7 +13,7 @@ const Slide = (props) => {
         src={`${img}916`}
         srcset={`${img}640 640w, ${img}916 916w, ${img}1030 1030w`}
       />
-      <h4 class="slide-title">{props.label || ' '}</h4>
+      <h4>{props.label || ' '}</h4>
     </div>
   );
 }

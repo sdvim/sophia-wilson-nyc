@@ -30,8 +30,3 @@
 .slide.is-active .slide-image {
   display: block;
 }
-
-.slide-title {
-  font-family: 'Fredoka One', cursive;
-  font-size: 1.25rem;
-}
