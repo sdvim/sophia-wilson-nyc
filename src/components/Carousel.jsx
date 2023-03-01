@@ -46,6 +46,7 @@ const Carousel = (props) => {
         <CarouselSlide
           active={index === currentIndex()}
           filename={slide().filename}
+          label={slide().label}
           ontouchend={handleSwipe}
         />
       }</Index>
