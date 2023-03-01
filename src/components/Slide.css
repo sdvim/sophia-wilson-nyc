@@ -6,29 +6,32 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: auto calc(100% - 3.5rem);
+  background-position: top center;
+  background-repeat: no-repeat;
+  text-align: center;
   opacity: 0;
-  pointer-events: none;
-}
-
-.slide.is-active {
-  opacity: 1;
-  pointer-events: all;
 }
 
 .slide-image {
-  display: block;
+  display: none;
   height: calc(100% - 3.5rem);
   width: auto;
   max-width: 100%;
   object-fit: contain;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
   margin: 0 auto;
+  user-select: none;
+}
+
+.slide.is-active {
+  opacity: 1;
+}
+
+.slide.is-active .slide-image {
+  display: block;
 }
 
 .slide-title {
   font-family: 'Fredoka One', cursive;
   font-size: 1.25rem;
-  text-align: center;
 }

@@ -3,12 +3,15 @@ import './Slide.css';
 const Slide = (props) => {
   const img = `/images/${encodeURIComponent(props.filename)}?nf_resize=fit&h=`;
   return (
-    <div classList={{'is-active': props.active, 'slide': true }}>
+    <div
+      classList={{'is-active': props.active, 'slide': true }}
+      style={{ 'background-image': `url(${img}64)` }}
+    >
       <img
         class="slide-image"
-        style={{ 'background-image': `url(${img}30)` }}
-        srcset={`${img}480, ${img}720 1.5x, ${img}1440 2x`}
-        src={`${img}720`}
+        loading="lazy"
+        src={`${img}916`}
+        srcset={`${img}640 640w, ${img}916 916w, ${img}1030 1030w`}
       />
       <h4 class="slide-title">{props.label || ' '}</h4>
     </div>
