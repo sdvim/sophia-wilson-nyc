@@ -6,20 +6,3 @@
   overflow: hidden;
   display: flex;
 }
-
-.carousel-prev-button,
-.carousel-next-button {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  cursor: pointer;
-}
-
-.carousel-prev-button {
-  left: 0;
-}
-
-.carousel-next-button {
-  right: 0;
-}

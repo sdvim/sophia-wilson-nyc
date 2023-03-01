@@ -16,13 +16,13 @@ const Carousel = (props) => {
     resetTimer();
   };
 
-  const handleSwipe = (e) => {
-    if (e.deltaX > 50) {
+  const handleClick = (e) => {
+    if (e.pageX < window.innerWidth / 2 ) {
       handlePrevious();
-    } else if (e.deltaX < -50) {
+    } else {
       handleNext();
     }
-  };
+  }
 
   const startTimer = () => {
     setTimer(setInterval(handleNext, 8000));
@@ -41,17 +41,14 @@ const Carousel = (props) => {
   });
 
   return (
-    <div class="carousel">
+    <div class="carousel" onclick={handleClick}>
       <Index each={props.slides}>{(slide, index) =>
         <CarouselSlide
           active={index === currentIndex()}
           filename={slide().filename}
           label={slide().label}
-          ontouchend={handleSwipe}
         />
       }</Index>
-      <div class="carousel-prev-button" onclick={handlePrevious}></div>
-      <div class="carousel-next-button" onclick={handleNext}></div>
     </div>
   );
 };
