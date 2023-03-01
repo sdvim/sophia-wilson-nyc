@@ -1,4 +1,4 @@
-.carousel-slide {
+.slide {
   flex: 1;
   flex-shrink: 0;
   position: absolute;
@@ -10,12 +10,12 @@
   pointer-events: none;
 }
 
-.carousel-slide.is-active {
+.slide.is-active {
   opacity: 1;
   pointer-events: all;
 }
 
-.carousel-slide-image {
+.slide-image {
   display: block;
   height: calc(100% - 3.5rem);
   width: auto;
@@ -27,7 +27,7 @@
   margin: 0 auto;
 }
 
-.carousel-slide-title {
+.slide-title {
   font-family: 'Fredoka One', cursive;
   font-size: 1.25rem;
   text-align: center;

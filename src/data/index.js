@@ -1,2 +1,2 @@
-export { default as carouselItems } from './carousel-items';
+export { default as slides } from './slides';
 export { default as metadata } from './metadata';

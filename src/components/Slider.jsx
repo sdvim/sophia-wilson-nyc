@@ -1,8 +1,8 @@
 import { createSignal, createEffect, onCleanup } from 'solid-js';
-import CarouselSlide from './CarouselSlide';
-import './Carousel.css';
+import Slide from './Slide';
+import './Slider.css';
 
-const Carousel = (props) => {
+const Slider = (props) => {
   const [currentIndex, setCurrentIndex] = createSignal(0);
   const [timer, setTimer] = createSignal(null);
 
@@ -41,9 +41,9 @@ const Carousel = (props) => {
   });
 
   return (
-    <div class="carousel" onclick={handleClick}>
+    <div class="slider" onclick={handleClick}>
       <Index each={props.slides}>{(slide, index) =>
-        <CarouselSlide
+        <Slide
           active={index === currentIndex()}
           filename={slide().filename}
           label={slide().label}
@@ -53,4 +53,4 @@ const Carousel = (props) => {
   );
 };
 
-export default Carousel;
+export default Slider;
