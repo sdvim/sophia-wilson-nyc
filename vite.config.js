@@ -1,3 +1,4 @@
+import netlify from "solid-start-netlify";
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
 export default defineConfig({
@@ -11,6 +12,7 @@ export default defineConfig({
       enforce: "pre",
     },
     solid({
+      adapter: netlify({ edge: true }),
       ssr: false,
       extensions: [".mdx", ".md"],
     }),
