@@ -25,7 +25,7 @@ const Carousel = (props) => {
   };
 
   const startTimer = () => {
-    setTimer(setInterval(handleNext, 8000));
+    setTimer(setInterval(handleNext, 800000));
   };
 
   const resetTimer = () => {
