@@ -22,7 +22,7 @@
   content: '\00a0';
 }
 
-.slide .lazy-image {
+.slide .lazy-image img {
   display: none;
 }
 
@@ -30,6 +30,6 @@
   opacity: 1;
 }
 
-.slide.is-active .lazy-image {
+.slide.is-active .lazy-image img {
   display: block;
 }
