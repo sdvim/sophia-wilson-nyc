@@ -6,27 +6,30 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: auto calc(100% - 3.5rem);
-  background-position: top center;
-  background-repeat: no-repeat;
   text-align: center;
   opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.slide-image {
+.slide h4 {
+  margin: 1rem 0 0;
+}
+
+.slide h4:empty::before {
+  content: '\00a0';
+}
+
+.slide .lazy-image {
   display: none;
-  height: calc(100% - 3.5rem);
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
-  margin: 0 auto;
-  user-select: none;
 }
 
 .slide.is-active {
   opacity: 1;
 }
 
-.slide.is-active .slide-image {
+.slide.is-active .lazy-image {
   display: block;
 }
