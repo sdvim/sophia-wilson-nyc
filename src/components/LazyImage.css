@@ -15,3 +15,17 @@
   height: 100%;
   object-fit: contain;
 }
+
+/* Hack to remove iOS lazy load border until patch is in */
+/* https://bugs.webkit.org/show_bug.cgi?id=243601 */
+.lazy-image::after {
+  content: '';
+  display: block;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid white;
+  pointer-events: none;
+}
