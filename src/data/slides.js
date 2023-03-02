@@ -200,7 +200,7 @@ export default [
     label: 'Studs',
   },
   {
-    filename: 'Schön! 2.jpg',
+    filename: 'Schon 2.jpg',
     label: '',
   },
   {
