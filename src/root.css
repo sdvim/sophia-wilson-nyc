@@ -61,12 +61,6 @@ h1 {
   text-transform: uppercase;
 }
 
-h4 {
-  font-weight: inherit;
-  font-family: 'Fredoka One', cursive;
-  font-size: 1rem;
-}
-
 a,
 a:visited {
   color: #C71C1C;
@@ -80,7 +74,10 @@ a:hover {
   html {
     font-size: 18px;
   }
-  h4 {
-    font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 21px;
   }
 }
