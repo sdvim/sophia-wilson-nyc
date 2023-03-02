@@ -48,7 +48,7 @@
 }
 
 .lazy-slide-title {
-  font-family: 'Fredoka One', cursive;
+  font-family: var(--cooler-font);
   text-align: center;
   margin: 1rem 0 0;
 }
