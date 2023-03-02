@@ -13,7 +13,7 @@ export default defineConfig({
     },
     solid({
       adapter: netlify({ edge: true }),
-      ssr: false,
+      ssr: true,
       extensions: [".mdx", ".md"],
     }),
   ],
