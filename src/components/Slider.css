@@ -5,5 +5,29 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  cursor: pointer;
+}
+
+.slider-cursor-left,
+.slider-cursor-right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.slider-cursor-left {
+  left: 0;
+  cursor: w-resize;
+}
+
+.slider-cursor-right {
+  right: 0;
+  cursor: e-resize;
+}
+
+@media screen and (max-width: 600px) {
+  .slider-cursor-left,
+  .slider-cursor-right {
+    display: none;
+  }
 }

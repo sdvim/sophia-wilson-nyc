@@ -49,6 +49,8 @@ const Slider = (props) => {
           label={slide().label}
         />
       }</Index>
+      <div class="slider-cursor-left"></div>
+      <div class="slider-cursor-right"></div>
     </div>
   );
 };
