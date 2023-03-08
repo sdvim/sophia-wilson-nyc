@@ -1,9 +1,5 @@
 export default [
   {
-    filename: 'NYLON-JAPAN_2.jpg',
-    label: 'Nylon Japan',
-  },
-  {
     filename: 'GOOGLE-PIXEL-MAGIC-ERASER_Final-Hi-Res_1.jpg',
     label: 'Google',
   },
@@ -154,6 +150,10 @@ export default [
   {
     filename: 'OUI-THE-PEOPLE_Edited-Prints_23.jpg',
     label: 'Oui The People',
+  },
+  {
+    filename: 'NYLON-JAPAN_2.jpg',
+    label: 'Nylon Japan',
   },
   {
     filename: 'SALEM-MITCHELL-LA-TEST_Final-Edit_2.jpg',
