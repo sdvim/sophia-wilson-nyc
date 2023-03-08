@@ -57,7 +57,6 @@ const LazySlider = (props) => {
               <img
                 src={`${img}&h=3000`}
                 loading={loading()}
-                alt={slide().label || "A photograph by Sophia Wilson"}
               />
             </div>
             <p class="lazy-slide-title">{slide().label}</p>
