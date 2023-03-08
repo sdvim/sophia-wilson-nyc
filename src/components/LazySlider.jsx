@@ -55,7 +55,7 @@ const LazySlider = (props) => {
               style={{"background-image": `url(${img}&h=64)`}}
             >
               <img
-                src={`${img}&h=1440`}
+                src={`${img}&h=3000`}
                 loading={loading()}
                 alt={slide().label || "A photograph by Sophia Wilson"}
               />
