@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+  
+media_folder: public/images
+public_folder: /images
+site_url: https://sophiawilson.netlify.app
+logo_url: https://sophiawilson.nyc/android-chrome-512x512.png
+
+collections:
+  - label: Images
+    name: Image
+    folder: public/images
+    create: true
+    fields:
+      - name: title
+        label: Title
+        type: text
+      - name: image
+        label: Image
+        type: image
+    format: json
+    extension: json
+    slug: "{{fields.title}}"
+    sort: title
