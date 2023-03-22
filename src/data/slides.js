@@ -164,7 +164,7 @@ export default [
     label: 'Office Magazine',
   },
   {
-    filename: 'Schön! 2.jpg',
+    filename: 'Schon 2.jpg',
     label: '',
   },
   {
