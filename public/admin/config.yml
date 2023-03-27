@@ -15,7 +15,7 @@ editor:
   
 media_folder: public/images
 public_folder: /images
-site_url: https://sophiawilson.netlify.app
+site_url: https://sophiawilson.nyc
 logo_url: https://sophiawilson.nyc/android-chrome-512x512.png
 
 collections:
