@@ -1,6 +1,17 @@
 backend:
   name: git-gateway
   branch: main
+  squash_merges: true
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
+
+editor:
+  preview: false
   
 media_folder: public/images
 public_folder: /images
@@ -8,18 +19,80 @@ site_url: https://sophiawilson.netlify.app
 logo_url: https://sophiawilson.nyc/android-chrome-512x512.png
 
 collections:
-  - label: Images
-    name: Image
-    folder: public/images
-    create: true
-    fields:
-      - name: title
-        label: Title
-        type: text
-      - name: image
-        label: Image
-        type: image
+  - name: pages
+    label: Pages
+    format: frontmatter
+    extension: mdx
+    files:
+    # - name: "404"
+    #   label: "404"
+    #   file: src/routes/[...404].mdx
+    #   fields:
+    #     - name: title
+    #       label: Title
+    #       widget: hidden
+    #     - name: body
+    #       label: Content
+    #       widget: markdown
+    - name: about
+      label: About
+      file: src/routes/About.mdx
+      fields:
+        - name: title
+          label: Title
+          widget: hidden
+        - name: body
+          label: Content
+          widget: markdown
+
+  - name: data
+    label: Data
     format: json
     extension: json
-    slug: "{{fields.title}}"
-    sort: title
+    files:
+    - name: metadata
+      label: Site metadata
+      file: src/data/metadata.json
+      fields:
+      - name: title
+        label: Site title
+        widget: string
+        required: true
+      - name: description
+        label: Site description
+        widget: string
+        required: true
+    - name: photos
+      label: Photos
+      file: src/data/slides.json
+      fields:
+      - name: autoplayIntervalMs
+        label: Autoplay Interval (ms)
+        widget: number
+        default: 8000
+        min: 0
+        step: 500
+        value_type: int
+        required: true
+        hint: "Set to 0 to disable autoplay. Default: 8000 milliseconds"
+      - name: photos
+        label: Photos
+        widget: list
+        label_singular: photo
+        collapsed: false
+        min: 1
+        required: true
+        add_to_top: true
+        fields:
+        - name: filename
+          label: Photo
+          widget: image
+          choose_url: false
+          required: true
+          media_library:
+            config:
+              max_file_size: 10485760 # 1024 x 1024 x 10 = 10 MB
+        - name: label
+          label: Label
+          widget: string
+          required: false

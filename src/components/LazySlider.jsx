@@ -24,7 +24,7 @@ const LazySlider = (props) => {
   }
 
   const startTimer = () => {
-    setTimer(setInterval(handleNext, 8000));
+    setTimer(setInterval(handleNext, props.autoplayIntervalMs));
   };
 
   const resetTimer = () => {
@@ -47,7 +47,7 @@ const LazySlider = (props) => {
         const loading = () => inRange(index, currentIndex(), 2) ? "eager" : "lazy";
         const isActive = () => index === currentIndex();
         const img = `https://sophiawilson.netlify.app` +
-          `/images/${encodeURIComponent(slide().filename)}?nf_resize=fit`;  
+          `${(slide().filename)}?nf_resize=fit`;
         return (
           <div classList={{"is-active": isActive(), "slide": true}}>
             <div
