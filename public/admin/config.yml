@@ -36,7 +36,7 @@ collections:
     #       widget: markdown
     - name: about
       label: About
-      file: src/routes/About.mdx
+      file: src/routes/about.mdx
       fields:
         - name: title
           label: Title
