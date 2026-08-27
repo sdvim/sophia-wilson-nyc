@@ -1,4 +1,11 @@
 {
   "title": "Sophia Wilson",
-  "description": "Sophia is a photographer and visual artist based in New York City."
+  "description": "Sophia is a photographer and visual artist based in New York City.",
+  "colors": {
+    "siteName": "#A78C9B",
+    "link": "#FC7EC6",
+    "linkHover": "#FCEC7E",
+    "background": "#FFFFFF",
+    "text": "#000000"
+  }
 }

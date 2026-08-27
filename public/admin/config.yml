@@ -62,6 +62,47 @@ collections:
         label: Site description
         widget: string
         required: true
+      - name: colors
+        label: Appearance
+        widget: object
+        collapsed: false
+        required: true
+        fields:
+        - name: siteName
+          label: Site name color
+          widget: color
+          default: "#A78C9B"
+          allowInput: true
+          enableAlpha: false
+          required: true
+        - name: link
+          label: Link color
+          widget: color
+          default: "#FC7EC6"
+          allowInput: true
+          enableAlpha: false
+          required: true
+        - name: linkHover
+          label: Link hover color
+          widget: color
+          default: "#FCEC7E"
+          allowInput: true
+          enableAlpha: false
+          required: true
+        - name: background
+          label: Body background color
+          widget: color
+          default: "#FFFFFF"
+          allowInput: true
+          enableAlpha: false
+          required: true
+        - name: text
+          label: Body text color
+          widget: color
+          default: "#000000"
+          allowInput: true
+          enableAlpha: false
+          required: true
     - name: photos
       label: Photos
       file: src/data/slides.json

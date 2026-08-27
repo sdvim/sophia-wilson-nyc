@@ -14,9 +14,19 @@ import {
   Title,
 } from "solid-start";
 import "./root.css";
+
+const colors = metadata.colors ?? {};
+const themeStyles = {
+  "--site-name-color": colors.siteName ?? "#A78C9B",
+  "--link-color": colors.link ?? "#FC7EC6",
+  "--link-hover-color": colors.linkHover ?? "#FCEC7E",
+  "--body-background-color": colors.background ?? "#FFFFFF",
+  "--body-text-color": colors.text ?? "#000000",
+};
+
 export default function Root() {
   return (
-    <Html lang="en">
+    <Html lang="en" style={themeStyles}>
       <Head>
         <Title>{metadata.title}</Title>
         <Meta charset="utf-8" />
