@@ -1,5 +1,5 @@
 // @refresh reload
-import { metadata } from "./data";
+import { metadata, themeColors, themeStyles } from "./data";
 import { Suspense } from "solid-js";
 import {
   A,
@@ -15,14 +15,7 @@ import {
 } from "solid-start";
 import "./root.css";
 
-const colors = metadata.colors ?? {};
-const themeStyles = {
-  "--site-name-color": colors.siteName ?? "#A78C9B",
-  "--link-color": colors.link ?? "#FC7EC6",
-  "--link-hover-color": colors.linkHover ?? "#FCEC7E",
-  "--body-background-color": colors.background ?? "#FFFFFF",
-  "--body-text-color": colors.text ?? "#000000",
-};
+const faviconVersion = `fredoka-one-${themeColors.siteName.slice(1)}`;
 
 export default function Root() {
   return (
@@ -37,8 +30,7 @@ export default function Root() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" preload />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/svg+xml" sizes="any" href={`/favicon.svg?v=${faviconVersion}`} />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Body>
